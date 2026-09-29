@@ -1,0 +1,15 @@
+schema_version: 1
+repository: pricing-and-revenue-optimization
+role: umbrella
+axis: application
+area: pricing-revenue
+status: active
+owner: jorsacademy
+projects:
+  - apparel-markdown-optimization-lp
+  - causal-pricing-promotion-nonlinear-optimization-python
+  - dynamic-pricing-revenue-management-rl
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
