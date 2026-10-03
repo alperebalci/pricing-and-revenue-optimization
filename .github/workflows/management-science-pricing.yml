@@ -1,0 +1,29 @@
+name: Management Science Pricing Extensions
+
+on:
+  push:
+    paths:
+      - 'projects/causal-operations-and-experimentation/**'
+      - 'projects/empirical-operations-and-demand-modeling/**'
+      - '.github/workflows/management-science-pricing.yml'
+  pull_request:
+    paths:
+      - 'projects/causal-operations-and-experimentation/**'
+      - 'projects/empirical-operations-and-demand-modeling/**'
+      - '.github/workflows/management-science-pricing.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project:
+          - causal-operations-and-experimentation
+          - empirical-operations-and-demand-modeling
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r projects/${{ matrix.project }}/requirements.txt
+      - run: PYTHONPATH=projects/${{ matrix.project }} pytest -q projects/${{ matrix.project }}
