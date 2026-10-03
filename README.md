@@ -9,6 +9,8 @@ This repository is the primary umbrella repository for this Jors Academy researc
 
 - [`apparel-markdown-optimization-lp`](projects/apparel-markdown-optimization-lp/)
 - [`causal-pricing-promotion-nonlinear-optimization-python`](projects/causal-pricing-promotion-nonlinear-optimization-python/)
+- [`causal-operations-and-experimentation`](projects/causal-operations-and-experimentation/) — A/B tests, DiD, AIPW and budgeted treatment policies
+- [`empirical-operations-and-demand-modeling`](projects/empirical-operations-and-demand-modeling/) — MNL demand estimation, elasticities and price optimization
 - [`dynamic-pricing-revenue-management-rl`](projects/dynamic-pricing-revenue-management-rl/)
 
 Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves the source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot.
