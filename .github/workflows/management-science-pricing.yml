@@ -1,16 +1,12 @@
 name: Management Science Pricing Extensions
 
+# Required baseline runs on each main commit and every pull request.
+# Path-scoped workflows may remain as additional specialized checks.
 on:
   push:
-    paths:
-      - 'projects/causal-operations-and-experimentation/**'
-      - 'projects/empirical-operations-and-demand-modeling/**'
-      - '.github/workflows/management-science-pricing.yml'
+    branches: [main]
   pull_request:
-    paths:
-      - 'projects/causal-operations-and-experimentation/**'
-      - 'projects/empirical-operations-and-demand-modeling/**'
-      - '.github/workflows/management-science-pricing.yml'
+  workflow_dispatch:
 
 jobs:
   test:
